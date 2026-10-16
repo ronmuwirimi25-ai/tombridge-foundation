@@ -1,20 +1,21 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10233f">
-  <meta name="description" content="TomBridge Foundation — Turning Loss Into Impact. Our developing mission is to support cancer patients and their families with compassion, dignity and hope.">
+  <meta name="description" content="TomBridge Foundation — Turning Loss Into Impact. A developing vision to support cancer patients and their families with compassion, dignity and hope.">
   <title>TomBridge Foundation | Turning Loss Into Impact</title>
   <style>
     :root {
       --navy: #10233f;
-      --gold: #d8b46a;
-      --cream: #faf8f2;
-      --white: #ffffff;
-      --text: #293548;
+      --navy-light: #193757;
+      --gold: #d7b46a;
+      --cream: #faf8f3;
+      --white: #fff;
+      --text: #384354;
+      --muted: #657184;
     }
 
     * { box-sizing: border-box; }
@@ -23,45 +24,58 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-      color: var(--text);
       background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a { color: inherit; }
+
+    .top-note {
+      padding: 9px 16px;
+      background: #f0e8d7;
+      color: var(--navy);
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: .3px;
     }
 
     header {
       background: var(--navy);
       color: var(--white);
       text-align: center;
-      padding: 24px 18px 60px;
-      border-bottom: 4px solid var(--gold);
+      padding: 28px 18px 18px;
+      border-bottom: 3px solid var(--gold);
     }
 
-    .brand-mark {
+    .emblem {
+      width: 66px;
+      height: 66px;
+      margin: 0 auto 8px;
       color: var(--gold);
-      font-size: 42px;
-      line-height: 1.3;
     }
 
-    .brand-name {
-      margin: 4px 0;
-      font-size: clamp(25px, 6vw, 38px);
-      letter-spacing: 1px;
+    .brand {
+      margin: 0;
+      font-size: clamp(25px, 6vw, 39px);
+      letter-spacing: 1.4px;
+      line-height: 1.25;
     }
 
     .tagline {
       color: var(--gold);
-      font-size: 16px;
-      letter-spacing: 2px;
-      margin: 8px 0 22px;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin: 10px 0 20px;
     }
 
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px 20px;
-      margin-top: 25px;
+      gap: 8px 22px;
+      padding: 12px 0 5px;
     }
 
     nav a {
@@ -73,192 +87,301 @@
     nav a:hover { color: var(--gold); }
 
     .hero {
-      background: var(--navy);
+      background:
+        radial-gradient(ellipse at 50% 0%, #244565 0%, transparent 65%),
+        var(--navy);
       color: white;
       text-align: center;
-      padding: 35px 22px 75px;
+      padding: 76px 22px 82px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
     }
 
     .hero h2 {
-      max-width: 750px;
-      margin: 0 auto 18px;
-      font-size: clamp(30px, 7vw, 48px);
-      line-height: 1.2;
+      max-width: 760px;
+      margin: 16px auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 7vw, 55px);
+      font-weight: normal;
+      line-height: 1.18;
     }
 
     .hero p {
-      max-width: 650px;
-      margin: 0 auto 28px;
-      font-size: 18px;
-      color: #edf0f5;
+      max-width: 620px;
+      margin: 0 auto 30px;
+      color: #e5eaf0;
+      font-size: 17px;
     }
 
     .button {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 12px 23px;
       background: var(--gold);
       color: var(--navy);
+      border-radius: 3px;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 4px;
+      transition: opacity .2s;
     }
+
+    .button:hover { opacity: .88; }
 
     main {
       max-width: 1000px;
-      margin: auto;
-      padding: 25px 20px 55px;
+      margin: 0 auto;
+      padding: 22px 22px 55px;
     }
 
     section {
-      padding: 35px 0;
-      scroll-margin-top: 20px;
+      padding: 42px 0;
+      scroll-margin-top: 15px;
     }
 
-    h2.section-title {
+    .section-heading {
       color: var(--navy);
-      font-size: 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 5vw, 36px);
+      font-weight: normal;
       line-height: 1.3;
-      margin-bottom: 14px;
+      margin: 0 0 12px;
     }
 
     .gold-line {
-      width: 65px;
+      width: 58px;
       height: 3px;
       background: var(--gold);
-      margin: 0 0 22px;
+      margin: 0 0 23px;
+    }
+
+    .intro {
+      font-size: 18px;
+      color: var(--navy-light);
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 18px;
-      margin-top: 25px;
+      margin-top: 27px;
     }
 
     .card {
       background: white;
-      border: 1px solid #e8e2d5;
+      border: 1px solid #e9e3d8;
       border-top: 3px solid var(--gold);
-      border-radius: 6px;
+      border-radius: 4px;
       padding: 22px;
     }
 
-    .card h3 { color: var(--navy); }
+    .card h3 {
+      color: var(--navy);
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
 
-    .memorial {
+    .card p { margin: 0; }
+
+    .story-panel {
+      margin-top: 24px;
+      padding: 32px 24px;
       background: var(--navy);
       color: white;
-      padding: 32px 24px;
-      border-radius: 6px;
+      border-radius: 4px;
       text-align: center;
     }
 
-    .memorial h2 { color: var(--gold); }
+    .story-panel .eyebrow { margin-bottom: 10px; }
+
+    .story-panel h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      font-weight: normal;
+      margin: 0 0 12px;
+      color: var(--gold);
+    }
+
+    .story-panel p {
+      max-width: 590px;
+      margin: 8px auto;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .value {
+      text-align: center;
+      padding: 17px 10px;
+      background: white;
+      border: 1px solid #e9e3d8;
+      color: var(--navy);
+      font-weight: bold;
+    }
+
+    .value span {
+      display: block;
+      color: #a37d32;
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
 
     .status {
-      background: #f0eadc;
+      padding: 20px;
+      background: #f0e8d7;
       border-left: 4px solid var(--gold);
-      padding: 18px;
       font-size: 14px;
-      border-radius: 3px;
     }
 
     footer {
       background: var(--navy);
       color: white;
       text-align: center;
-      padding: 28px 18px;
+      padding: 32px 18px;
+    }
+
+    footer .footer-brand {
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    footer .footer-tagline { color: var(--gold); }
+
+    footer p {
+      margin: 7px 0;
       font-size: 13px;
     }
 
-    footer p { margin: 6px 0; }
-
     @media (max-width: 480px) {
-      nav { gap: 10px 14px; }
+      .hero { padding: 55px 20px 62px; }
       .hero p { font-size: 16px; }
+      nav { gap: 10px 15px; }
       main { padding-left: 18px; padding-right: 18px; }
+      section { padding: 32px 0; }
     }
   </style>
 </head>
 <body>
 
+  <div class="top-note">
+    An emerging vision for compassionate support and care
+  </div>
+
   <header>
-    <div class="brand-mark" aria-hidden="true">♡</div>
-    <h1 class="brand-name">TomBridge Foundation</h1>
+    <svg class="emblem" viewBox="0 0 100 100"
+         role="img" aria-label="TomBridge bridge emblem">
+      <path d="M9 69 Q50 12 91 69"
+        fill="none" stroke="currentColor"
+        stroke-width="3" stroke-linecap="round"/>
+      <path d="M15 69 H85"
+        fill="none" stroke="currentColor" stroke-width="3"/>
+      <path d="M25 69 V49 M50 69 V31 M75 69 V49"
+        fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M39 83 C24 71 31 58 42 63
+               C46 65 49 70 50 72
+               C55 61 69 61 72 72
+               C75 83 61 91 50 96 Z"
+        fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linejoin="round"/>
+    </svg>
+
+    <h1 class="brand">TOMBRIDGE FOUNDATION</h1>
     <p class="tagline">TURNING LOSS INTO IMPACT</p>
+
     <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#mission">Our Mission</a>
       <a href="#story">Our Story</a>
-      <a href="#involved">Get Involved</a>
+      <a href="#future">Our Vision</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <div class="hero" id="home">
-    <h2>Compassion in difficult moments. Hope for the journey ahead.</h2>
+    <div class="eyebrow">A legacy of love. A future of hope.</div>
+    <h2>From a legacy of love, a future of hope.</h2>
     <p>
-      We are developing a mission to support cancer patients and their
-      families with compassion, dignity and practical care.
-      Every life matters. Every act of kindness matters.
+      Turning personal loss into a vision of meaningful support
+      for people affected by cancer. Building a future rooted in
+      compassion, dignity and care.
     </p>
     <a class="button" href="#mission">Discover Our Mission</a>
   </div>
 
   <main>
     <section id="mission">
-      <h2 class="section-title">Our Mission</h2>
+      <h2 class="section-heading">Our Mission</h2>
       <div class="gold-line"></div>
+
+      <p class="intro">
+        To serve and support cancer patients and their families
+        with compassion, dignity and hope.
+      </p>
+
       <p>
-        TomBridge Foundation is being developed with a commitment to
-        serving and supporting people affected by cancer. We believe
-        that nobody should have to face life's most difficult moments
-        without compassion, understanding and hope.
+        TomBridge Foundation is being developed around the belief
+        that people facing life's most difficult moments deserve
+        kindness, understanding and support. We aim to explore
+        practical ways to make the cancer journey less isolating
+        for patients and those who care for them.
       </p>
 
       <div class="cards">
         <article class="card">
-          <h3>Compassionate Support</h3>
+          <h3>Compassion</h3>
           <p>
-            Recognising the emotional challenges faced by patients
-            and the people who care for them.
+            Recognising the emotional and personal challenges
+            experienced by patients and their families.
           </p>
         </article>
+
         <article class="card">
-          <h3>Dignity and Care</h3>
+          <h3>Dignity</h3>
           <p>
-            Promoting a caring approach that respects every person's
-            circumstances, needs and dignity.
+            Keeping people at the heart of our vision, with respect
+            for their individual circumstances and experiences.
           </p>
         </article>
+
         <article class="card">
-          <h3>Hope Through Action</h3>
+          <h3>Hope</h3>
           <p>
-            Working towards practical ways to make difficult
-            experiences less isolating for patients and families.
+            Working towards a future where care, encouragement
+            and human connection can make a difference.
           </p>
         </article>
       </div>
     </section>
 
     <section id="story">
-      <h2 class="section-title">Our Story</h2>
+      <h2 class="section-heading">The Heart Behind TomBridge</h2>
       <div class="gold-line"></div>
+
       <p>
-        TomBridge Foundation was inspired by the lives and memories
-        of Thomas and Bridget, whose experiences with cancer left
-        a lasting impact.
-      </p>
-      <p>
-        Their memory inspires a vision of turning personal loss
-        into meaningful support for others. TomBridge represents
-        a commitment to carrying love forward through compassion,
-        service and care for people facing difficult circumstances.
+        Some of life's deepest losses can inspire a lasting
+        commitment to help others. TomBridge Foundation grew from
+        the memories of Thomas and Bridget, whose lives and
+        experiences with cancer left a profound mark.
       </p>
 
-      <div class="memorial">
-        <h2>In Loving Memory</h2>
-        <p><strong>Thomas and Bridget</strong></p>
+      <p>
+        Their memory is at the heart of this developing vision:
+        to turn loss into impact and love into compassionate
+        action for people facing difficult circumstances.
+      </p>
+
+      <div class="story-panel">
+        <div class="eyebrow">Forever remembered</div>
+        <h3>In Loving Memory of Thomas and Bridget</h3>
         <p>
           Your lives remain part of our story.
           Your memory inspires the hope we seek to share.
@@ -266,46 +389,63 @@
       </div>
     </section>
 
-    <section id="involved">
-      <h2 class="section-title">Be Part of the Journey</h2>
+    <section id="future">
+      <h2 class="section-heading">Our Vision for the Future</h2>
       <div class="gold-line"></div>
+
       <p>
-        We are at the beginning of this journey. As our plans develop,
-        we hope to connect with people who share our commitment to
-        compassion and support for cancer patients and their families.
+        We are at the beginning of this journey. As TomBridge
+        Foundation develops, we hope to explore meaningful
+        support for cancer patients and their families, build
+        connections with others who share this vision, and
+        identify opportunities to serve with care.
       </p>
+
       <p>
-        There will be opportunities to learn more about our plans
-        and explore ways to contribute as the foundation develops.
+        Our intended activities and partnerships will be developed
+        responsibly as the organisation takes its next steps.
+        We will share further information as plans become clearer.
       </p>
+
+      <div class="values">
+        <div class="value"><span>♡</span>Compassion</div>
+        <div class="value"><span>◇</span>Dignity</div>
+        <div class="value"><span>∞</span>Legacy</div>
+        <div class="value"><span>✧</span>Hope</div>
+      </div>
     </section>
 
     <section id="contact">
-      <h2 class="section-title">Contact TomBridge</h2>
+      <h2 class="section-heading">Connect With TomBridge</h2>
       <div class="gold-line"></div>
+
       <p>
-        Thank you for visiting TomBridge Foundation. We look forward
-        to sharing more about our mission as our work develops.
+        Thank you for taking an interest in TomBridge Foundation.
+        We look forward to sharing more about our developing
+        mission and future plans.
       </p>
+
       <p>
-        Our official contact details will be published here once
-        they are established.
+        Official contact details will be added once established.
+        Please revisit this page for future updates.
       </p>
     </section>
 
     <section aria-label="Organisation status">
       <div class="status">
-        <strong>About our status:</strong>
-        TomBridge Foundation is currently in development and is not
-        yet officially registered as a charity or foundation.
-        Our activities and plans are being developed.
+        <strong>Transparency matters.</strong>
+        TomBridge Foundation is currently in development and is
+        not yet officially registered as a charity or foundation.
+        Its activities, partnerships and future plans are being
+        developed. No donations are being solicited through
+        this website at this stage.
       </div>
     </section>
   </main>
 
   <footer>
-    <p><strong>TomBridge Foundation</strong></p>
-    <p>Turning Loss Into Impact</p>
+    <p class="footer-brand">TOMBRIDGE FOUNDATION</p>
+    <p class="footer-tagline">Turning Loss Into Impact</p>
     <p>Inspired by Thomas and Bridget. Driven by compassion.</p>
     <p>© 2026 TomBridge Foundation</p>
   </footer>

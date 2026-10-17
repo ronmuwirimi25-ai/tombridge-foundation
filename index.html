@@ -13,13 +13,10 @@
       --navy-light: #193757;
       --gold: #d7b46a;
       --cream: #faf8f3;
-      --white: #fff;
       --text: #384354;
-      --muted: #657184;
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -30,20 +27,17 @@
       line-height: 1.75;
     }
 
-    a { color: inherit; }
-
     .top-note {
       padding: 9px 16px;
       background: #f0e8d7;
       color: var(--navy);
       text-align: center;
       font-size: 12px;
-      letter-spacing: .3px;
     }
 
     header {
       background: var(--navy);
-      color: var(--white);
+      color: white;
       text-align: center;
       padding: 28px 18px 18px;
       border-bottom: 3px solid var(--gold);
@@ -74,7 +68,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 8px 22px;
+      gap: 10px 18px;
       padding: 12px 0 5px;
     }
 
@@ -113,7 +107,7 @@
     }
 
     .hero p {
-      max-width: 620px;
+      max-width: 650px;
       margin: 0 auto 30px;
       color: #e5eaf0;
       font-size: 17px;
@@ -127,10 +121,7 @@
       border-radius: 3px;
       font-weight: bold;
       text-decoration: none;
-      transition: opacity .2s;
     }
-
-    .button:hover { opacity: .88; }
 
     main {
       max-width: 1000px;
@@ -196,13 +187,11 @@
       text-align: center;
     }
 
-    .story-panel .eyebrow { margin-bottom: 10px; }
-
     .story-panel h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 29px;
       font-weight: normal;
-      margin: 0 0 12px;
+      margin: 10px 0 12px;
       color: var(--gold);
     }
 
@@ -213,25 +202,26 @@
 
     .values {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 12px;
       margin-top: 22px;
     }
 
     .value {
-      text-align: center;
-      padding: 17px 10px;
+      padding: 17px 14px;
       background: white;
       border: 1px solid #e9e3d8;
       color: var(--navy);
-      font-weight: bold;
     }
 
-    .value span {
-      display: block;
-      color: #a37d32;
-      font-size: 23px;
-      margin-bottom: 5px;
+    .value h3 { margin: 0 0 6px; font-size: 17px; }
+    .value p { margin: 0; font-size: 14px; }
+
+    .involvement {
+      background: white;
+      border: 1px solid #e9e3d8;
+      padding: 24px;
+      border-radius: 4px;
     }
 
     .status {
@@ -255,23 +245,18 @@
     }
 
     footer .footer-tagline { color: var(--gold); }
-
-    footer p {
-      margin: 7px 0;
-      font-size: 13px;
-    }
+    footer p { margin: 7px 0; font-size: 13px; }
 
     @media (max-width: 480px) {
       .hero { padding: 55px 20px 62px; }
       .hero p { font-size: 16px; }
-      nav { gap: 10px 15px; }
       main { padding-left: 18px; padding-right: 18px; }
       section { padding: 32px 0; }
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="top-note">
     An emerging vision for compassionate support and care
   </div>
@@ -280,18 +265,15 @@
     <svg class="emblem" viewBox="0 0 100 100"
          role="img" aria-label="TomBridge bridge emblem">
       <path d="M9 69 Q50 12 91 69"
-        fill="none" stroke="currentColor"
-        stroke-width="3" stroke-linecap="round"/>
+        fill="none" stroke="currentColor" stroke-width="3"/>
       <path d="M15 69 H85"
         fill="none" stroke="currentColor" stroke-width="3"/>
       <path d="M25 69 V49 M50 69 V31 M75 69 V49"
         fill="none" stroke="currentColor" stroke-width="2"/>
       <path d="M39 83 C24 71 31 58 42 63
-               C46 65 49 70 50 72
-               C55 61 69 61 72 72
-               C75 83 61 91 50 96 Z"
-        fill="none" stroke="currentColor" stroke-width="2.5"
-        stroke-linejoin="round"/>
+        C46 65 49 70 50 72 C55 61 69 61 72 72
+        C75 83 61 91 50 96 Z"
+        fill="none" stroke="currentColor" stroke-width="2.5"/>
     </svg>
 
     <h1 class="brand">TOMBRIDGE FOUNDATION</h1>
@@ -300,9 +282,10 @@
     <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#mission">Our Mission</a>
+      <a href="#support">How We Hope to Help</a>
       <a href="#story">Our Story</a>
-      <a href="#future">Our Vision</a>
-      <a href="#contact">Contact</a>
+      <a href="#values">Our Values</a>
+      <a href="#involved">Get Involved</a>
     </nav>
   </header>
 
@@ -335,31 +318,71 @@
         for patients and those who care for them.
       </p>
 
+      <p>
+        Our working mission is to help relieve some of the practical
+        and emotional pressures that can affect people living with
+        cancer and their families, while connecting them with
+        appropriate specialist and community support.
+      </p>
+    </section>
+
+    <section id="support">
+      <h2 class="section-heading">How We Hope to Help</h2>
+      <div class="gold-line"></div>
+
+      <p class="intro">Support that sees the person, not just the diagnosis.</p>
+
+      <p>
+        As the foundation develops, we hope to build a thoughtful
+        and responsible approach around the needs of patients and
+        families. The areas below describe our intended direction;
+        they are not services currently available.
+      </p>
+
       <div class="cards">
         <article class="card">
-          <h3>Compassion</h3>
+          <h3>Practical Assistance</h3>
           <p>
-            Recognising the emotional and personal challenges
-            experienced by patients and their families.
+            Explore ways to help with everyday pressures connected
+            to a cancer journey, subject to available resources,
+            fair eligibility criteria and appropriate safeguards.
           </p>
         </article>
 
         <article class="card">
-          <h3>Dignity</h3>
+          <h3>Emotional Support</h3>
           <p>
-            Keeping people at the heart of our vision, with respect
-            for their individual circumstances and experiences.
+            Help people feel less alone by identifying compassionate
+            listening opportunities and signposting to established
+            support organisations and specialist services.
           </p>
         </article>
 
         <article class="card">
-          <h3>Hope</h3>
+          <h3>Information and Signposting</h3>
           <p>
-            Working towards a future where care, encouragement
-            and human connection can make a difference.
+            Help patients and families find relevant NHS,
+            cancer-support, welfare and community information
+            from trusted organisations.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Families and Carers</h3>
+          <p>
+            Recognise the important role of family members and
+            carers, whose own practical and emotional needs
+            can also be significant.
           </p>
         </article>
       </div>
+
+      <p>
+        TomBridge Foundation does not provide medical advice or
+        treatment. Any future activities will be developed carefully
+        and within the organisation's resources, responsibilities
+        and legal status.
+      </p>
     </section>
 
     <section id="story">
@@ -375,8 +398,8 @@
 
       <p>
         Their memory is at the heart of this developing vision:
-        to turn loss into impact and love into compassionate
-        action for people facing difficult circumstances.
+        to turn loss into impact and love into compassionate action
+        for people facing difficult circumstances.
       </p>
 
       <div class="story-panel">
@@ -389,29 +412,65 @@
       </div>
     </section>
 
-    <section id="future">
-      <h2 class="section-heading">Our Vision for the Future</h2>
+    <section id="values">
+      <h2 class="section-heading">Our Values</h2>
       <div class="gold-line"></div>
 
-      <p>
-        We are at the beginning of this journey. As TomBridge
-        Foundation develops, we hope to explore meaningful
-        support for cancer patients and their families, build
-        connections with others who share this vision, and
-        identify opportunities to serve with care.
-      </p>
-
-      <p>
-        Our intended activities and partnerships will be developed
-        responsibly as the organisation takes its next steps.
-        We will share further information as plans become clearer.
-      </p>
+      <p>These principles will guide the choices we make as TomBridge Foundation grows.</p>
 
       <div class="values">
-        <div class="value"><span>♡</span>Compassion</div>
-        <div class="value"><span>◇</span>Dignity</div>
-        <div class="value"><span>∞</span>Legacy</div>
-        <div class="value"><span>✧</span>Hope</div>
+        <article class="value">
+          <h3>Compassion</h3>
+          <p>Meet people with kindness, empathy and care.</p>
+        </article>
+
+        <article class="value">
+          <h3>Dignity and Respect</h3>
+          <p>Listen without judgement and respect each person's circumstances.</p>
+        </article>
+
+        <article class="value">
+          <h3>Integrity</h3>
+          <p>Be honest about what we can offer and what is still being developed.</p>
+        </article>
+
+        <article class="value">
+          <h3>Fairness</h3>
+          <p>Work towards clear, consistent and responsible decisions.</p>
+        </article>
+
+        <article class="value">
+          <h3>Stewardship</h3>
+          <p>Use any future resources carefully, transparently and for their intended purpose.</p>
+        </article>
+
+        <article class="value">
+          <h3>Hope</h3>
+          <p>Build a legacy that seeks to make a meaningful difference.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="involved">
+      <h2 class="section-heading">Be Part of the Journey</h2>
+      <div class="gold-line"></div>
+
+      <div class="involvement">
+        <p class="intro">A meaningful mission grows through shared care and commitment.</p>
+
+        <p>
+          As plans develop, we hope to connect with people,
+          community groups and organisations who share our
+          commitment to supporting cancer patients and their
+          families. In time, there may be opportunities to
+          contribute ideas, explore partnerships or volunteer skills.
+        </p>
+
+        <p>
+          We will publish a suitable contact route when one has
+          been established. For now, this page is a place to learn
+          about the vision and follow its development.
+        </p>
       </div>
     </section>
 
@@ -435,10 +494,10 @@
       <div class="status">
         <strong>Transparency matters.</strong>
         TomBridge Foundation is currently in development and is
-        not yet officially registered as a charity or foundation.
-        Its activities, partnerships and future plans are being
-        developed. No donations are being solicited through
-        this website at this stage.
+        not yet registered with the Charity Commission as a charity.
+        The activities described on this website are intended future
+        areas of work, not services currently available. No donations
+        are being solicited through this website at this stage.
       </div>
     </section>
   </main>
@@ -449,6 +508,5 @@
     <p>Inspired by Thomas and Bridget. Driven by compassion.</p>
     <p>© 2026 TomBridge Foundation</p>
   </footer>
-
 </body>
 </html>
